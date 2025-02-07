@@ -1,0 +1,6 @@
+[submodule "step1/tinyrenderer"]
+	path = step1/tinyrenderer
+	url = https://github.com/ssloy/tinyrenderer.git
+[submodule "step1/raytracing.github.io"]
+	path = step1/raytracing.github.io
+	url = https://github.com/RayTracing/raytracing.github.io.git
