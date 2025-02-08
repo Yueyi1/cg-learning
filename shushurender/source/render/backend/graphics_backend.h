@@ -3,18 +3,31 @@
 
 #define USING_OPENGL
 
-#ifdef USING_OPENGL
+#if defined(USING_OPENGL)
 #include "render/backend/opengl/opengl_handler.h"
-#include "glad/glad.h"
-#endif // USING_OPENGL
+#elif defined(USING_VULKAN)
+#include "render/backend/vulkan/vulkan_handler.h"
+#elif defined(USING_SHUSHUGL)
+#include "render/backend/shushugl/shushugl_handler.h"
+#else
+#define PLATFORM "Unknown"
+#endif
+
+
+class GLHandler
+{
+public:
+	GLHandler();
+	~GLHandler();
+
+private:
+
+};
 
 class GraphicsBackend
 {
 private:
-	//GraphicHanlder mHandler;
-#ifdef USING_OPENGL
-	
-#endif // USING_OPENGL
+	GLHandler mHandler;
 
 public:
 	GraphicsBackend();

@@ -85,6 +85,7 @@ endfunction(assign_source_group)
 set(
     source_list 
     "thirdparty/glad/src/glad.c"
+    "source/config/config.h"
     "source/tools/stb_image.h"
     "source/tools/stb_image.cpp"
     "source/tools/debug_tools.h"
@@ -95,6 +96,7 @@ set(
     "source/render/shushurender.h"
     "source/render/shushurender.cpp"
     "source/render/backend/graphics_backend.h"
+    "source/render/backend/shushugl/shushugl.h"
     "source/render/backend/opengl/opengl_handler.h"
 )
 

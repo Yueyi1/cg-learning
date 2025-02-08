@@ -15,6 +15,7 @@ void ShushuRender::init()
 {
     DEBUG_PRINTF("enter ShushuRender::init()\n");
     
+    m_platform_inst = platform::Platform::GetInstance();
 
     mInitSuccess = true;
     DEBUG_PRINTF("ShushuRender::init() %i \n", mInitSuccess);
@@ -22,7 +23,10 @@ void ShushuRender::init()
 
 void ShushuRender::loop()
 {
-    
+    while (true)
+    {
+
+    }
 }
 
 void ShushuRender::cleanup()
@@ -34,7 +38,7 @@ void ShushuRender::Start()
 {
     if (!mInitSuccess)
     {
-        ERR_PRINT("ShushuRender::Start() : opg render is uninitlized.")
+        ERR_PRINT("ShushuRender::Start() : ShushuRender is uninitlized.")
             return;
     }
     loop();
